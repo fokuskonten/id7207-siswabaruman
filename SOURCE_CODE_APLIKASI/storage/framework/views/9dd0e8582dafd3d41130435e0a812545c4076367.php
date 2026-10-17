@@ -1,0 +1,192 @@
+<nav class="sidebar">
+    <div class="sidebar-header">
+        <a href="#" class="sidebar-brand">MAN 1<span> PPDB</span></a>
+        <div class="sidebar-toggler not-active">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="sidebar-body">
+        <ul class="nav">
+            <li class="nav-item nav-category">Main</li>
+            <li class="nav-item <?php echo $__env->yieldContent('dashboard'); ?>">
+                <a href="<?php echo e(route('home')); ?>" class="nav-link">
+                    <i class="link-icon" data-feather="box"></i>
+                    <span class="link-title">Beranda</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="<?php echo e(route('web_ppdb')); ?>" class="nav-link">
+                    <i class="link-icon" data-feather="globe"></i>
+                    <span class="link-title">Visit Website</span>
+                </a>
+            </li>
+            <li class="nav-item nav-category">PPDB</li>
+            <li class="nav-item ">
+                <a class="nav-link" data-toggle="collapse" href="#ppdb" role="button" aria-expanded="false" aria-controls="forms">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Data Calon Peserta</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <?php
+                    $total['calon_regular'] = \App\Models\CalonPeserta::where('jalur', 'Regular')->where('status','Calon Pendaftar')->count();
+                    $total['calon_undangan'] = \App\Models\CalonPeserta::where('jalur', 'Undangan')->where('status','Calon Pendaftar')->count();
+                ?>
+                <div class="collapse" id="ppdb">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="<?php echo e(route('calon_regular')); ?>" class="nav-link <?php echo $__env->yieldContent('regular'); ?>">Reguler (<?php echo e($total['calon_regular']); ?>)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo e(route('calon_undangan')); ?>" class="nav-link <?php echo $__env->yieldContent('undangan'); ?>">Undangan (<?php echo e($total['calon_undangan']); ?>)</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item <?php echo $__env->yieldContent('tes'); ?>">
+                <a href="<?php echo e(route('input_hasil_tes')); ?>" class="nav-link">
+                    <i class="link-icon" data-feather="database"></i>
+                    <span class="link-title">Input Hasil Tes</span>
+                </a>
+            </li>
+            <li class="nav-item <?php echo $__env->yieldContent('berkas'); ?>">
+                <a href="<?php echo e(route('cek_berkas_undangan')); ?>" class="nav-link">
+                    <i class="link-icon" data-feather="file-text"></i>
+                    <span class="link-title">Cek Berkas Undangan</span>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" data-toggle="collapse" href="#seleksi" role="button" aria-expanded="false" aria-controls="forms">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Hasil Seleksi</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <?php
+                    $total['lulus'] = \App\Models\CalonPeserta::where('status','Lulus')->count();
+                    $total['tidak_lulus'] = \App\Models\CalonPeserta::where('status','Tidak Lulus')->count();
+                ?>
+                <div class="collapse" id="seleksi">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="<?php echo e(route('peserta_lolos')); ?>" class="nav-link <?php echo $__env->yieldContent('peserta_lolos'); ?>">Lulus (<?php echo e($total['lulus']); ?>)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo e(route('peserta_reject')); ?>" class="nav-link <?php echo $__env->yieldContent('peserta_reject'); ?>">Tidak Lulus (<?php echo e($total['tidak_lulus']); ?>)</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" data-toggle="collapse" href="#laporan" role="button" aria-expanded="false" aria-controls="forms">
+                    <i class="link-icon" data-feather="book"></i>
+                    <span class="link-title">Laporan</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse" id="laporan">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="<?php echo e(route('cetak_surat')); ?>" class="nav-link <?php echo $__env->yieldContent('cetak_surat'); ?>">Surat Pernyataan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo e(route('peserta_lolos_print')); ?>" class="nav-link <?php echo $__env->yieldContent('peserta_lolos_print'); ?>">Data Peserta Lulus</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item nav-category">Master</li>
+            <li class="nav-item ">
+                <a class="nav-link" data-toggle="collapse" href="#persyaratan" role="button" aria-expanded="false" aria-controls="forms">
+                    <i class="link-icon" data-feather="clipboard"></i>
+                    <span class="link-title">Persyaratan</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse" id="persyaratan">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="<?php echo e(route('persyaratan_pendaftaran_umum')); ?>" class="nav-link <?php echo $__env->yieldContent('persyaratan_pendaftaran_umum'); ?>">Umum</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo e(route('persyaratan_pendaftaran_regular')); ?>" class="nav-link <?php echo $__env->yieldContent('persyaratan_pendaftaran_regular'); ?>">Regular</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo e(route('persyaratan_pendaftaran_undangan')); ?>" class="nav-link <?php echo $__env->yieldContent('persyaratan_pendaftaran_undangan'); ?>">Undangan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo e(route('persyaratan_pendaftaran_tempat')); ?>" class="nav-link <?php echo $__env->yieldContent('persyaratan_pendaftaran_tempat'); ?>">Tempat & Waktu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo e(route('persyaratan_pendaftaran_daftar_ulang')); ?>" class="nav-link <?php echo $__env->yieldContent('persyaratan_pendaftaran_daftar_ulang'); ?>">Daftar Ulang</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo e(route('persyaratan_pendaftaran_lain_lain')); ?>" class="nav-link <?php echo $__env->yieldContent('persyaratan_pendaftaran_lain_lain'); ?>">Lain lain</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" data-toggle="collapse" href="#biaya" role="button" aria-expanded="false" aria-controls="forms">
+                    <i class="link-icon" data-feather="dollar-sign"></i>
+                    <span class="link-title">Biaya</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse" id="biaya">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="<?php echo e(route('biaya_infaq')); ?>" class="nav-link <?php echo $__env->yieldContent('biaya_infaq'); ?>">Infaq</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo e(route('biaya_siswa')); ?>" class="nav-link <?php echo $__env->yieldContent('biaya_siswa'); ?>">Siswa</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item <?php echo $__env->yieldContent('jadwal'); ?>">
+                <a href="<?php echo e(route('jadwal_pendaftaran_admin')); ?>" class="nav-link">
+                    <i class="link-icon" data-feather="calendar"></i>
+                    <span class="link-title">Jadwal Pendaftaran</span>
+                </a>
+            </li>
+            <li class="nav-item <?php echo $__env->yieldContent('jadwal_test'); ?>">
+                <a href="<?php echo e(route('jadwal_test')); ?>" class="nav-link">
+                    <i class="link-icon" data-feather="clock"></i>
+                    <span class="link-title">Jadwal Test</span>
+                </a>
+            </li>
+            <li class="nav-item <?php echo $__env->yieldContent('booklet'); ?>">
+                <a href="<?php echo e(route('booklet_pendaftaran_admin')); ?>" class="nav-link">
+                    <i class="link-icon" data-feather="book-open"></i>
+                    <span class="link-title">Booklet</span>
+                </a>
+            </li>
+            <li class="nav-item <?php echo $__env->yieldContent('alur_pendaftaran'); ?>">
+                <a href="<?php echo e(route('alur_pendaftaran_admin')); ?>" class="nav-link">
+                    <i class="link-icon" data-feather="layers"></i>
+                    <span class="link-title">Alur Pendaftaran</span>
+                </a>
+            </li>
+            <li class="nav-item <?php echo $__env->yieldContent('soal_test'); ?>">
+                <a href="<?php echo e(route('soal_test')); ?>" class="nav-link">
+                    <i class="link-icon" data-feather="file-text"></i>
+                    <span class="link-title">Soal Tes Regular</span>
+                </a>
+            </li>
+            <li class="nav-item nav-category">Account</li>
+            <?php if(Auth::user()->role == 'Root'): ?>
+                <li class="nav-item <?php echo $__env->yieldContent('akun_pegawai'); ?>">
+                    <a href="<?php echo e(route('akun_pegawai')); ?>" class="nav-link">
+                        <i class="link-icon" data-feather="user"></i>
+                        <span class="link-title">Akun pegawai</span>
+                    </a>
+                </li>
+            <?php endif; ?>
+            <li class="nav-item">
+                <a href="<?php echo e(route('akun_saya')); ?>" class="nav-link <?php echo $__env->yieldContent('akun_saya'); ?>">
+                    <i class="link-icon" data-feather="settings"></i>
+                    <span class="link-title">Pengaturan</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<?php /**PATH D:\Compressed\ppdb-main\ppdb-main\resources\views/includes/sidebar.blade.php ENDPATH**/ ?>
