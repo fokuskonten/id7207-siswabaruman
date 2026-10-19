@@ -76,6 +76,6 @@
         </div>
     </div>
     <div class="col-12 text-center mt-3 pt-3" style="border-top: 1px solid rgba(255,255,255,0.2);">
-        <p class="text-white mb-0" style="font-size: 13px;">&copy; {{ date('Y') }} MAN 1 PPDB &bull; Didukung oleh <strong>FokusKonten</strong>. Hak cipta dilindungi.</p>
+        <p class="text-white mb-0" style="font-size: 13px;">&copy; {{ date('Y') }} SiswaBaruMAN &bull; Didukung oleh <strong>FokusKonten</strong>. Hak cipta dilindungi.</p>
     </div>
 </div>

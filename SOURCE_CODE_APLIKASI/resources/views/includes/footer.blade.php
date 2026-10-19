@@ -1,4 +1,4 @@
 <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between">
-    <p class="text-muted text-center text-md-left mb-0">Copyright © {{ date('Y') }} MAN 1 PPDB &bull; Didukung oleh <strong class="text-green">FokusKonten</strong>. Hak cipta dilindungi.</p>
+    <p class="text-muted text-center text-md-left mb-0">Copyright © {{ date('Y') }} SiswaBaruMAN &bull; Didukung oleh <strong class="text-green">FokusKonten</strong>. Hak cipta dilindungi.</p>
     <p class="text-muted text-center text-md-right mb-0 d-none d-md-block">Platform PPDB Resmi FokusKonten</p>
 </footer>
