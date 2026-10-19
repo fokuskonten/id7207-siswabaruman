@@ -84,15 +84,15 @@
 </nav>
 <div class="header">
     <div class="filter-black"></div>
-    <div class="text-green text-header">
-        <div class="row">
-            <div class="col-12 col-md-2 col-lg-2">
-                <img src="{{ asset('assets/images/logo.png') }}" alt="placeholder" class="pt-2 img-header" style="width:120px;float:right !important;">
+    <div class="text-header">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-2 col-lg-2 text-md-right text-center mb-3 mb-md-0">
+                <img src="{{ asset('logo.png') }}" alt="Logo" class="pt-2 img-header" style="width:110px; height:110px; border-radius:50%; object-fit:cover; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 3px solid rgba(255,255,255,0.85); display:inline-block;">
             </div>
             <div class="col-12 col-md-10 col-lg-10">
-                <h1 class="mb-3">Penerimaan Peserta Didik Baru (New Student Admission)</h1>
-                <h3 class="text-white">Madrasah Aliyah Negeri 1 Hulu Sungai Tengah</h3>
-                <a href="{{route('daftar')}}" class="mt-4 btn btn-green text-white">
+                <h1 class="mb-2 text-white font-weight-bold" style="font-size: 32px; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Penerimaan Peserta Didik Baru</h1>
+                <h4 class="text-white mb-3" style="font-weight: 400; opacity: 0.95; text-shadow: 0 1px 4px rgba(0,0,0,0.5);">Madrasah Aliyah Negeri 1 Hulu Sungai Tengah &bull; PPDB Online Terpadu</h4>
+                <a href="{{route('daftar')}}" class="mt-2 btn btn-green text-white font-weight-bold px-4 py-2" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);">
                     Daftar Sekarang
                 </a>
             </div>

@@ -13,11 +13,11 @@ Form Pendaftaran
         }
     </style>
     <link rel="stylesheet" href="{{ asset('/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('../../../assets/css/other/dropify.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/other/dropify.min.css') }}">
 @endsection
 
 @section('script')
-    <script src="{{ asset('../../../assets/js/dropify.min.js') }}"></script>
+    <script src="{{ asset('assets/js/dropify.min.js') }}"></script>
     <script>
         $('.dropify').dropify({
             messages: {

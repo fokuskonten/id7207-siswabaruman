@@ -6,10 +6,10 @@ Perbarui Biodata Peserta
 
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('../../../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
-<link rel="stylesheet" href="{{ asset('../../../assets/css/other/dropify.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/other/dropify.min.css') }}">
 <link rel="stylesheet" href="{{ asset('/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}" />
-<link rel="stylesheet" href="{{ asset('../../../assets/css/other/dropify.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/other/dropify.min.css') }}">
 <style>
     .null_data{border:2px solid red !important;}
     .datepicker{ border-radius: 10px !important; }
@@ -18,7 +18,7 @@ Perbarui Biodata Peserta
 @endsection
 
 @section('script')
-    <script src="{{ asset('../../../assets/js/dropify.min.js') }}"></script>
+    <script src="{{ asset('assets/js/dropify.min.js') }}"></script>
     <script src="{{ asset('/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js') }}"></script>
     <script src="{{ asset('/assets/js/datepicker.js') }}"></script>
     <script>

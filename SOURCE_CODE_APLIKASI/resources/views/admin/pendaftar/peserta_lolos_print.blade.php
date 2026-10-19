@@ -9,7 +9,7 @@ active
 @endsection
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('../../../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
 <style>
     .dt-buttons{
@@ -36,10 +36,10 @@ active
 @endsection
 
 @section('script')
-<script src="{{ asset('../../../assets/js/data-table.js') }}"></script>
-<script src="{{ asset('../../../assets/vendors/datatables.net/jquery.dataTables.js') }}"></script>
-<script src="{{ asset('../../../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js') }}"></script>
-<script src="{{ asset('../../../assets/js/data-table.js') }}"></script>
+<script src="{{ asset('assets/js/data-table.js') }}"></script>
+<script src="{{ asset('assets/vendors/datatables.net/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js') }}"></script>
+<script src="{{ asset('assets/js/data-table.js') }}"></script>
 
 <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>

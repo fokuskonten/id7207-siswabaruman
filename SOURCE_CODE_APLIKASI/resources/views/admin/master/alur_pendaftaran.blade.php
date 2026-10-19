@@ -9,11 +9,11 @@ active
 @endsection
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('../../../assets/css/other/dropify.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/other/dropify.min.css') }}">
 @endsection
 
 @section('script')
-    <script src="{{ asset('../../../assets/js/dropify.min.js') }}"></script>
+    <script src="{{ asset('assets/js/dropify.min.js') }}"></script>
     <script>
         $('.dropify').dropify({
             messages: {

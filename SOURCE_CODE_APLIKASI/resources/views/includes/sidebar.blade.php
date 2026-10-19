@@ -1,7 +1,10 @@
 <nav class="sidebar">
-    <div class="sidebar-header">
-        <a href="#" class="sidebar-brand" style="display: flex; align-items: center; gap: 8px;"><img src="{{ asset('logo.png') }}" alt="Logo" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover;"> MAN 1<span> PPDB</span></a>
-        <div class="sidebar-toggler not-active">
+    <div class="sidebar-header" style="padding: 0 16px; display: flex; align-items: center; justify-content: space-between;">
+        <a href="{{ route('home') }}" class="sidebar-brand" style="display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 800; letter-spacing: -0.3px; text-decoration: none; margin: 0; padding: 0; max-width: 170px; white-space: nowrap; overflow: hidden;">
+            <img src="{{ asset('logo.png') }}" alt="Logo" style="width: 26px; height: 26px; min-width: 26px; border-radius: 50%; object-fit: cover; box-shadow: 0 1px 3px rgba(0,0,0,0.15);">
+            <span style="color: #031a61; font-weight: 800; font-size: 15px;">MAN 1 <span style="color: #727cf5; font-weight: 700;">PPDB</span></span>
+        </a>
+        <div class="sidebar-toggler not-active" style="flex-shrink: 0; margin-left: 6px;">
             <span></span>
             <span></span>
             <span></span>

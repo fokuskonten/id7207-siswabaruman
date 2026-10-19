@@ -35,7 +35,7 @@
     .image-profile{
         width: 100%;
         height: 100px;
-        background-image: url("../../../assets/images/login-banner.jpg");
+        background-image: url("assets/images/login-banner.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -48,7 +48,7 @@
     .auth-page .auth-left-wrapper {
         width: 100%;
         height: 100%;
-        background-image: url("../../../assets/images/login-banner.jpg");
+        background-image: url("assets/images/login-banner.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -57,7 +57,7 @@
         min-height: 100px;
         width: 100%;
         height: 100%;
-        background-image: url("../../../assets/images/login-banner.jpg");
+        background-image: url("assets/images/login-banner.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

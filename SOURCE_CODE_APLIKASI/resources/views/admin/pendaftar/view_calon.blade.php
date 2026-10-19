@@ -6,7 +6,7 @@ Biodata Peserta
 
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('../../../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
 <style>
     .t-top{border-top: 1px solid #e8ebf1;}
     .t-bottom{border-bottom: 1px solid #e8ebf1;}
@@ -26,10 +26,10 @@ Biodata Peserta
 @endsection
 
 @section('script')
-<script src="{{ asset('../../../assets/js/data-table.js') }}"></script>
-<script src="{{ asset('../../../assets/vendors/datatables.net/jquery.dataTables.js') }}"></script>
-<script src="{{ asset('../../../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js') }}"></script>
-<script src="{{ asset('../../../assets/js/data-table.js') }}"></script>
+<script src="{{ asset('assets/js/data-table.js') }}"></script>
+<script src="{{ asset('assets/vendors/datatables.net/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js') }}"></script>
+<script src="{{ asset('assets/js/data-table.js') }}"></script>
 <script>
     $("#ppdb").toggleClass("show");
 

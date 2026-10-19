@@ -9,7 +9,7 @@ active
 @endsection
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('../../../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
 <style>
     table,td,tr,th,tbody,thead{
         vertical-align: top !important;
@@ -18,10 +18,10 @@ active
 @endsection
 
 @section('script')
-<script src="{{ asset('../../../assets/js/data-table.js') }}"></script>
-<script src="{{ asset('../../../assets/vendors/datatables.net/jquery.dataTables.js') }}"></script>
-<script src="{{ asset('../../../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js') }}"></script>
-<script src="{{ asset('../../../assets/js/data-table.js') }}"></script>
+<script src="{{ asset('assets/js/data-table.js') }}"></script>
+<script src="{{ asset('assets/vendors/datatables.net/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js') }}"></script>
+<script src="{{ asset('assets/js/data-table.js') }}"></script>
 <script>
     $('#data-table').DataTable({
         processing: true,

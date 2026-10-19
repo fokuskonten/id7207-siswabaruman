@@ -8,8 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="generator" content="HubSpot">
 
-        <meta name="author" content="FokusKonten">>
-        <meta name="description" content="Aplikasi voting berbasis web, mempermudah pengelola untuk melakukan pemilihan umum (voting) secara custom, realtime, akurat dan terstruktur">
+        <meta name="author" content="FokusKonten">
+        <meta name="description" content="Aplikasi Penerimaan Peserta Didik Baru (PPDB) Online Terpadu MAN 1 Hulu Sungai Tengah resmi FokusKonten">
         <meta name="robots" content="noindex,nofollow">
 
         <link rel="kanonik" href="" >
