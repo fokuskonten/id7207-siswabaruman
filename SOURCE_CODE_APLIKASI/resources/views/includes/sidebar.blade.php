@@ -1,6 +1,6 @@
 <nav class="sidebar">
     <div class="sidebar-header">
-        <a href="#" class="sidebar-brand">MAN 1<span> PPDB</span></a>
+        <a href="#" class="sidebar-brand" style="display: flex; align-items: center; gap: 8px;"><img src="{{ asset('logo.png') }}" alt="Logo" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover;"> MAN 1<span> PPDB</span></a>
         <div class="sidebar-toggler not-active">
             <span></span>
             <span></span>

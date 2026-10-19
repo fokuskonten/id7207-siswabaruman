@@ -58,14 +58,14 @@ class LoginController extends Controller
             'email' => 'Alamat email',
             'password' => 'Kata sandi',
         ]);
-        $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
+        $loginInput = $request->email;
+        $user = User::where('email', $loginInput)->orWhere('name', $loginInput)->first();
+        if ($user && Auth::attempt(['email' => $user->email, 'password' => $request->password])) {
             return redirect()->intended('/admin/dashboard')
                 ->with('success', 'Berhasil Login');
         }
-        $cek_email = User::where('email', $request->email)->count();
-        if ($cek_email == 0) {
-            return redirect("login")->with('error', 'Email anda salah');
+        if (!$user) {
+            return redirect("login")->with('error', 'Username atau Email anda salah');
         }
         return redirect("login")->with('error', 'Kata sandi anda salah');
     }

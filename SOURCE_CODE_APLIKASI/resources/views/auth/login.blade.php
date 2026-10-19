@@ -24,13 +24,25 @@ Login
                                     </div>
                                     <div class="col-md-7 pl-md-0">
                                         <div class="auth-form-wrapper px-4 py-4">
-                                            <a href="#" class="noble-ui-logo d-block mb-2">Admin PPDB <span style="text-green">Masuk</span></a>
-                                            <h5 class="text-muted font-weight-normal mb-4">Selamat datang di sistem pengelolaan Peserta Didik Baru MAN 1 Hulu Sungai Tengah</h5>
+                                            <div style="text-align: center; margin-bottom: 15px;">
+                                                <img src="{{ asset('logo.png') }}" alt="Logo" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 2px solid #fff;">
+                                            </div>
+                                            <a href="#" class="noble-ui-logo d-block mb-2 text-center">Admin PPDB <span style="text-green">Masuk</span></a>
+                                            <h5 class="text-muted font-weight-normal mb-3 text-center" style="font-size: 13px;">Selamat datang di sistem pengelolaan Peserta Didik Baru MAN 1 Hulu Sungai Tengah</h5>
+                                            
+                                            <!-- 1-Click Credential Helper -->
+                                            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; margin-bottom: 15px; text-align: center;">
+                                                <small style="display: block; font-weight: 600; color: #475569; margin-bottom: 6px;">Akses Login Cepat (1-Klik):</small>
+                                                <button type="button" class="btn btn-sm btn-outline-warning" onclick="document.getElementById('email').value='admin'; document.getElementById('Password').value='admin';" style="font-weight: 600; padding: 4px 12px; font-size: 12px;">
+                                                    <i class="fa fa-user-shield"></i> Administrator (admin / admin)
+                                                </button>
+                                            </div>
+
                                             <form class="forms-sample" id="form_login" method="POST" action="{{ route('login') }}">
                                                 @csrf
                                                 <div class="form-group">
-                                                    <label for="email">Email</label>
-                                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                                                    <label for="email">Username atau Email</label>
+                                                    <input type="text" class="form-control" id="email" name="email" placeholder="Username atau Email" autocomplete="username" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="Password">Password</label>
@@ -45,7 +57,7 @@ Login
                                                     </div>
                                                 </div>
                                             </form>
-<div class="text-center" style="margin-top: 15px; font-size: 12px; color: #64748b; font-family: sans-serif;">Powered by <a href="https://fokuskonten.my.id" target="_blank" style="color: #2563eb; font-weight: 600; text-decoration: none;">FokusKonten</a></div>
+<div class="text-center" style="margin-top: 15px; font-size: 12px; color: #64748b; font-family: sans-serif;">Didukung oleh <a href="https://fokuskonten.my.id" target="_blank" style="color: #2563eb; font-weight: 600; text-decoration: none;">FokusKonten</a></div>
                                         </div>
                                     </div>
                                 </div>
